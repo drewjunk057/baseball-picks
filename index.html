@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Reload every 5 min so a page left open keeps itself current. GitHub Pages
+     caches HTML for 10 minutes and that can't be configured, so the visible
+     "updated" stamp below is the reader's ground truth. -->
+<meta http-equiv="refresh" content="300">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
 <title>Baseball AI &middot; 2026-07-31</title>
 <style>
 *{box-sizing:border-box}
@@ -118,7 +123,9 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <button class="btn" onclick="toggleTheme()">Theme</button>
     </div>
   </header>
-  <p class="sub">13 of 15 games picked &middot; reasoned by gemini-3.6-flash</p>
+  <p class="sub">13 of 15 games picked &middot; reasoned by llama-3.3-70b-versatile &middot;
+    <span id="updated" data-ts="2026-07-31T17:29:23.967443+00:00"
+    >updated just now</span></p>
   <div class="tiles">
       <div class="tile"><div class="label">Record</div>
         <div class="value">8&ndash;1</div>
@@ -134,23 +141,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">New York Yankees @ Chicago Cubs</div>
       <div class="meta">Wrigley Field &middot; 2026-07-31 &middot; 11:20 AM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge lock">&#10003; Locked</span><span class="conf">confirmed lineups</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>New York Yankees</span>
-          <span class="pct">41.5%</span></div>
+          <span class="pct">43.7%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Chicago Cubs</span>
-          <span class="pct">58.5%</span></div>
+          <span class="pct">56.3%</span></div>
       </div>
-      <div class="bar" title="New York Yankees 41.5% &middot; Chicago Cubs 58.5%">
-        <div class="seg away" style="width:41.50%"></div>
-        <div class="seg home" style="width:58.50%"></div>
+      <div class="bar" title="New York Yankees 43.7% &middot; Chicago Cubs 56.3%">
+        <div class="seg away" style="width:43.67%"></div>
+        <div class="seg home" style="width:56.33%"></div>
       </div>
       <div class="pick">Pick: <b>Chicago Cubs</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Shota Imanaga holds a distinct starting pitching edge over Will Warren</span><span class="chip">Will Warren&#x27;s recent Statcast metrics show alarming contact suppression issues (53.6% hard-hit rate, .480 xwOBACON)</span><span class="chip">Imanaga has maintained strong contact quality control with a low 4.7% barrel rate recently</span><span class="chip">Cubs hold home-field advantage at Wrigley Field with two evenly matched 60+ win teams</span></div>
-      <p class="why">The starting pitching matchup heavily favors the Cubs in this matchup of two strong teams. Will Warren has struggled significantly with contact management recently, allowing a 53.6% hard-hit rate and a dangerous .480 xwOBACON over his recent outings. Conversely, Shota Imanaga continues to suppress barrels (4.7%) and control walks effectively, giving Chicago a solid edge at home.</p>
+        <span class="conf">&middot; medium confidence
+        &middot; 3 passes agreed within 9 pts (62% / 53% / 54%)</span></div>
+      <div class="factors"><span class="chip">Starting pitching matchup</span><span class="chip">Recent team form</span><span class="chip">Bullpen usage</span></div>
+      <p class="why">The Cubs have a slight edge in the starting pitching matchup, with Shota Imanaga&#x27;s recent statcast data showing a lower hard-hit percentage and barrel percentage compared to Will Warren. The Cubs&#x27; recent form has also been slightly better, with a 6-4 record in their last 10 games. The bullpens have been used relatively evenly, but the Cubs&#x27; bullpen has a slightly better relief ERA over the last three days.</p>
       <div class="sp"><span>Will Warren</span> &middot; ERA 4.41 &middot; WHIP 1.41 &middot; xwOBAcon 0.48 &middot; hard 53.6% &middot; whiff 23.1%<br>
         <span>Shota Imanaga</span> &middot; ERA 3.72 &middot; WHIP 1.10 &middot; xwOBAcon 0.342 &middot; hard 34.4% &middot; whiff 23.6%</div>
       
@@ -158,23 +166,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Pittsburgh Pirates @ Cincinnati Reds</div>
       <div class="meta">Great American Ball Park &middot; 2026-07-31 &middot; 3:10 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Pittsburgh Pirates</span>
-          <span class="pct">54.0%</span></div>
+          <span class="pct">56.3%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Cincinnati Reds</span>
-          <span class="pct">46.0%</span></div>
+          <span class="pct">43.7%</span></div>
       </div>
-      <div class="bar" title="Pittsburgh Pirates 54.0% &middot; Cincinnati Reds 46.0%">
-        <div class="seg away" style="width:54.00%"></div>
-        <div class="seg home" style="width:46.00%"></div>
+      <div class="bar" title="Pittsburgh Pirates 56.3% &middot; Cincinnati Reds 43.7%">
+        <div class="seg away" style="width:56.33%"></div>
+        <div class="seg home" style="width:43.67%"></div>
       </div>
       <div class="pick">Pick: <b>Pittsburgh Pirates</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Paul Skenes provides a distinct starting pitching advantage over Hunter Greene</span><span class="chip">Greene&#x27;s high hard-hit rate (47.4%) and .457 xwOBACON are elevated risks at Great American Ball Park</span><span class="chip">Both starters showcase elite swing-and-miss ability with K rates around 30%</span><span class="chip">Reds hold minor home-field advantage in a traditionally hitter-friendly venue</span></div>
-      <p class="why">Paul Skenes gives the visiting Pirates a clear advantage on the mound, maintaining an impressive 1.06 WHIP and 29.7% strikeout rate over a full 120.2 innings. While Hunter Greene possesses similar swing-and-miss upside, his recent underlying metrics point to severe contact authority issues, underscored by a .457 xwOBACON and a 47.4% hard-hit rate. In a venue as home-run friendly as Great American Ball Park, Greene&#x27;s susceptibility to hard contact offsets Cincinnati&#x27;s home-field advantage and makes Pittsburgh the lean.</p>
+        <span class="conf">&middot; high confidence
+        &middot; 3 passes agreed within 3 pts (44% / 45% / 42%)</span></div>
+      <div class="factors"><span class="chip">Paul Skenes holds a significant starting pitching edge over Hunter Greene (3.65 ERA vs 7.06 ERA)</span><span class="chip">Hunter Greene has been hit hard recently, yielding a .457 xwOBACON and 47.4% hard-hit rate over 94 batters faced</span><span class="chip">Pittsburgh&#x27;s bullpen spent 6.7 IP yesterday, placing heavy importance on Skenes delivering depth</span><span class="chip">Both teams enter with sluggish offenses, averaging 2.9 (Reds) and 3.2 (Pirates) runs per game over their last 10 games</span></div>
+      <p class="why">Pittsburgh carries a strong starting pitching advantage with Paul Skenes on the mound against Hunter Greene, who has allowed considerable hard contact (.457 xwOBACON) in limited action. Although the Pirates&#x27; bullpen pitched 6.7 innings yesterday, Skenes has the swing-and-miss ability and stamina to work deep into this contest. With both offenses struggling to score over their last 10 games, Skenes&#x27; durability gives the visiting Pirates the edge.</p>
       <div class="sp"><span>Paul Skenes</span> &middot; ERA 3.65 &middot; WHIP 1.06 &middot; xwOBAcon 0.361 &middot; hard 41.7% &middot; whiff 28.4%<br>
         <span>Hunter Greene</span> &middot; ERA 7.06 &middot; WHIP 1.34 &middot; xwOBAcon 0.457 &middot; hard 47.4% &middot; whiff 27.3%</div>
       
@@ -185,28 +194,30 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status">
         <span class="badge prov">No pick yet</span>
         <span class="conf">waiting on Philadelphia Phillies starter to be announced &mdash; the watcher picks this up automatically once posted</span></div>
+      <div class="status"><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="sp"><span>TBD</span> (away)<br><span>Brandon Young</span> (home)</div>
     </div>
     <div class="card">
       <div class="matchup">St. Louis Cardinals @ Toronto Blue Jays</div>
       <div class="meta">Rogers Centre &middot; 2026-07-31 &middot; 4:07 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>St. Louis Cardinals</span>
-          <span class="pct">39.0%</span></div>
+          <span class="pct">43.3%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Toronto Blue Jays</span>
-          <span class="pct">61.0%</span></div>
+          <span class="pct">56.7%</span></div>
       </div>
-      <div class="bar" title="St. Louis Cardinals 39.0% &middot; Toronto Blue Jays 61.0%">
-        <div class="seg away" style="width:39.00%"></div>
-        <div class="seg home" style="width:61.00%"></div>
+      <div class="bar" title="St. Louis Cardinals 43.3% &middot; Toronto Blue Jays 56.7%">
+        <div class="seg away" style="width:43.33%"></div>
+        <div class="seg home" style="width:56.67%"></div>
       </div>
       <div class="pick">Pick: <b>Toronto Blue Jays</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Dylan Cease boasts elite swing-and-miss metrics with a 35.8% K-rate and 29.9% whiff-rate recently</span><span class="chip">Kyle Leahy is vulnerable to hard contact, allowing a 49.0% hard-hit rate over his recent window</span><span class="chip">Massive starting pitching advantage for Toronto at Rogers Centre</span><span class="chip">Cardinals hold a slightly superior overall record (54-55 vs 50-59)</span></div>
-      <p class="why">The Blue Jays hold a clear starting pitching edge with Dylan Cease, who is operating as a true ace with suppressed contact quality (26.2% hard-hit) and elite strikeout numbers. Conversely, Kyle Leahy&#x27;s 3.55 ERA masks concerning underlying profile metrics, highlighted by a elevated 1.34 WHIP and 49.0% hard-hit rate recently. Despite St. Louis holding a slightly better overall team record, Cease&#x27;s dominance at home gives Toronto a strong edge.</p>
+        <span class="conf">&middot; high confidence
+        &middot; 3 passes agreed within 3 pts (55% / 57% / 58%)</span></div>
+      <div class="factors"><span class="chip">starting pitching matchup</span><span class="chip">bullpen usage</span><span class="chip">recent team form</span></div>
+      <p class="why">The home team has a slight edge in the starting pitching matchup with Dylan Cease&#x27;s superior recent statcast metrics, particularly his lower hard-hit percentage and higher whiff percentage. The away team&#x27;s bullpen has been heavily used over the last three days, which could be a factor in the late innings. Both teams have struggled in recent form, but the home team&#x27;s slightly better record over the last 10 games gives them a slim advantage.</p>
       <div class="sp"><span>Kyle Leahy</span> &middot; ERA 3.55 &middot; WHIP 1.34 &middot; xwOBAcon 0.34 &middot; hard 49.0% &middot; whiff 21.1%<br>
         <span>Dylan Cease</span> &middot; ERA 2.46 &middot; WHIP 1.09 &middot; xwOBAcon 0.309 &middot; hard 26.2% &middot; whiff 29.9%</div>
       
@@ -214,23 +225,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Arizona Diamondbacks @ Cleveland Guardians</div>
       <div class="meta">Progressive Field &middot; 2026-07-31 &middot; 4:10 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Arizona Diamondbacks</span>
-          <span class="pct">39.0%</span></div>
+          <span class="pct">41.3%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Cleveland Guardians</span>
-          <span class="pct">61.0%</span></div>
+          <span class="pct">58.7%</span></div>
       </div>
-      <div class="bar" title="Arizona Diamondbacks 39.0% &middot; Cleveland Guardians 61.0%">
-        <div class="seg away" style="width:39.00%"></div>
-        <div class="seg home" style="width:61.00%"></div>
+      <div class="bar" title="Arizona Diamondbacks 41.3% &middot; Cleveland Guardians 58.7%">
+        <div class="seg away" style="width:41.33%"></div>
+        <div class="seg home" style="width:58.67%"></div>
       </div>
       <div class="pick">Pick: <b>Cleveland Guardians</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Significant starting pitching advantage for Cleveland&#x27;s Tanner Bibee over Mitch Bratt</span><span class="chip">Mitch Bratt elevated walk rate (14.1%) and barrel rate (10.6%) over recent starts</span><span class="chip">Bibee suppresses hard contact well (29.9% hard-hit rate)</span><span class="chip">Home-field advantage for Guardians at Progressive Field</span></div>
-      <p class="why">Cleveland holds a major edge on the mound with Tanner Bibee facing Arizona&#x27;s Mitch Bratt. Bratt has struggled in his limited major league action, showing poor command with a 1.98 WHIP and a 14.1% walk rate alongside a high 10.6% barrel rate. While Bibee&#x27;s strikeout numbers have dropped recently, his ability to limit hard contact should allow Cleveland to control the game at home.</p>
+        <span class="conf">&middot; high confidence
+        &middot; 3 passes agreed within 2 pts (60% / 58% / 58%)</span></div>
+      <div class="factors"><span class="chip">Starting pitching matchup</span><span class="chip">Recent team form</span><span class="chip">Bullpen performance</span></div>
+      <p class="why">Tanner Bibee&#x27;s recent statcast data shows a lower hard-hit percentage and barrel percentage compared to Mitch Bratt, which gives the Guardians an edge in the starting pitching matchup. The Diamondbacks have been playing better recently, but the Guardians&#x27; bullpen has been more effective over the last three days. The park factor slightly favors the Guardians, but it&#x27;s not a significant advantage.</p>
       <div class="sp"><span>Mitch Bratt</span> &middot; ERA 6.32 &middot; WHIP 1.98 &middot; xwOBAcon 0.338 &middot; hard 36.2% &middot; whiff 13.9%<br>
         <span>Tanner Bibee</span> &middot; ERA 3.89 &middot; WHIP 1.18 &middot; xwOBAcon 0.335 &middot; hard 29.9% &middot; whiff 17.3%</div>
       
@@ -238,23 +250,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Chicago White Sox @ Tampa Bay Rays</div>
       <div class="meta">Tropicana Field &middot; 2026-07-31 &middot; 4:10 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Chicago White Sox</span>
-          <span class="pct">38.0%</span></div>
+          <span class="pct">42.3%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Tampa Bay Rays</span>
-          <span class="pct">62.0%</span></div>
+          <span class="pct">57.7%</span></div>
       </div>
-      <div class="bar" title="Chicago White Sox 38.0% &middot; Tampa Bay Rays 62.0%">
-        <div class="seg away" style="width:38.00%"></div>
-        <div class="seg home" style="width:62.00%"></div>
+      <div class="bar" title="Chicago White Sox 42.3% &middot; Tampa Bay Rays 57.7%">
+        <div class="seg away" style="width:42.33%"></div>
+        <div class="seg home" style="width:57.67%"></div>
       </div>
       <div class="pick">Pick: <b>Tampa Bay Rays</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Erick Fedde&#x27;s alarming Statcast contact metrics (55.6% hard-hit rate, .410 xwOBACON)</span><span class="chip">Nick Martinez&#x27;s elite contact suppression (27.4% hard-hit rate, 85.6 mph exit velocity)</span><span class="chip">Tampa Bay&#x27;s strong overall record (64-44) and home-field advantage at Tropicana Field</span></div>
-      <p class="why">The Rays hold a substantial pitching edge in this matchup due to Erick Fedde&#x27;s recent vulnerability, as he is getting hit extremely hard with a 55.6% hard-hit rate and .410 xwOBACON. Nick Martinez excels at limiting hard contact despite a modest strikeout rate, giving Tampa Bay a stable floor on the mound. Combined with the Rays&#x27; stronger overall record and home-field advantage, Tampa Bay is a well-calibrated favorite.</p>
+        <span class="conf">&middot; high confidence
+        &middot; 3 passes agreed within 1 pts (58% / 58% / 57%)</span></div>
+      <div class="factors"><span class="chip">Starting pitching matchup</span><span class="chip">Home team recent form</span><span class="chip">Bullpen usage</span></div>
+      <p class="why">The starting pitching matchup favors the Rays with Nick Martinez&#x27;s 2.45 ERA and recent statcast data showing a low xwOBACON and hard-hit percentage. The Rays&#x27; recent form, with an 8-2 record in their last 10 games, also gives them an edge. Both bullpens have been used recently, but the Rays&#x27; bullpen has a slightly better relief ERA over the last 3 days.</p>
       <div class="sp"><span>Erick Fedde</span> &middot; ERA 4.25 &middot; WHIP 1.40 &middot; xwOBAcon 0.41 &middot; hard 55.6% &middot; whiff 21.1%<br>
         <span>Nick Martinez</span> &middot; ERA 2.45 &middot; WHIP 1.10 &middot; xwOBAcon 0.29 &middot; hard 27.4% &middot; whiff 16.5%</div>
       
@@ -262,23 +275,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Miami Marlins @ New York Mets</div>
       <div class="meta">Citi Field &middot; 2026-07-31 &middot; 4:10 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Miami Marlins</span>
-          <span class="pct">47.0%</span></div>
+          <span class="pct">43.0%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>New York Mets</span>
-          <span class="pct">53.0%</span></div>
+          <span class="pct">57.0%</span></div>
       </div>
-      <div class="bar" title="Miami Marlins 47.0% &middot; New York Mets 53.0%">
-        <div class="seg away" style="width:47.00%"></div>
-        <div class="seg home" style="width:53.00%"></div>
+      <div class="bar" title="Miami Marlins 43.0% &middot; New York Mets 57.0%">
+        <div class="seg away" style="width:43.00%"></div>
+        <div class="seg home" style="width:57.00%"></div>
       </div>
       <div class="pick">Pick: <b>New York Mets</b>
-        <span class="conf">&middot; low confidence</span></div>
-      <div class="factors"><span class="chip">Freddy Peralta possesses a strong 28.8% whiff rate, offering higher strikeout upside than Janson Junk</span><span class="chip">Janson Junk shows alarming Statcast flags with a low 14.0% whiff rate and 90.3 mph average exit velocity allowed</span><span class="chip">Miami holds a superior overall record (55-55 vs. 47-63)</span><span class="chip">Citi Field environment and home-field advantage slightly favor New York</span></div>
-      <p class="why">While the Marlins enter with the better record, the starting pitching matchup gives a slight tilt to the home Mets. Freddy Peralta continues to generate elite swing-and-miss (28.8% whiff rate), which should help suppress Miami&#x27;s offense despite his control issues. On the other hand, Janson Junk&#x27;s low 14.0% whiff rate and .351 xwOBACON leave him prone to hard contact against a Mets lineup playing in their home ballpark.</p>
+        <span class="conf">&middot; high confidence
+        &middot; 3 passes agreed within 2 pts (58% / 57% / 56%)</span></div>
+      <div class="factors"><span class="chip">Freddy Peralta&#x27;s better recent statcast</span><span class="chip">Home team&#x27;s better recent form</span><span class="chip">Bullpen rest and performance</span></div>
+      <p class="why">The home team, New York Mets, has a slight edge due to Freddy Peralta&#x27;s better recent statcast, including a lower barrel percentage and higher whiff percentage, compared to Janson Junk. Additionally, the Mets have been performing better recently, with a 5-5 record in their last 10 games, compared to the Marlins&#x27; 3-7 record. The bullpens are relatively well-rested, but the Mets&#x27; bullpen has been more effective over the last three days.</p>
       <div class="sp"><span>Janson Junk</span> &middot; ERA 4.89 &middot; WHIP 1.36 &middot; xwOBAcon 0.351 &middot; hard 40.0% &middot; whiff 14.0%<br>
         <span>Freddy Peralta</span> &middot; ERA 4.99 &middot; WHIP 1.48 &middot; xwOBAcon 0.334 &middot; hard 37.0% &middot; whiff 28.8%</div>
       
@@ -286,23 +300,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Washington Nationals @ Atlanta Braves</div>
       <div class="meta">Truist Park &middot; 2026-07-31 &middot; 4:15 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Washington Nationals</span>
-          <span class="pct">49.0%</span></div>
+          <span class="pct">50.7%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Atlanta Braves</span>
-          <span class="pct">51.0%</span></div>
+          <span class="pct">49.3%</span></div>
       </div>
-      <div class="bar" title="Washington Nationals 49.0% &middot; Atlanta Braves 51.0%">
-        <div class="seg away" style="width:49.00%"></div>
-        <div class="seg home" style="width:51.00%"></div>
+      <div class="bar" title="Washington Nationals 50.7% &middot; Atlanta Braves 49.3%">
+        <div class="seg away" style="width:50.67%"></div>
+        <div class="seg home" style="width:49.33%"></div>
       </div>
-      <div class="pick">Pick: <b>Atlanta Braves</b>
-        <span class="conf">&middot; low confidence</span></div>
-      <div class="factors"><span class="chip">Bryce Elder showing severe recent Statcast red flags (17.1% barrel rate, .481 xwOBACON)</span><span class="chip">Foster Griffin&#x27;s strong overall season (2.76 ERA, 1.03 WHIP) and contact management</span><span class="chip">Braves&#x27; superior overall record (64-45) and home-field advantage at Truist Park</span><span class="chip">Griffin&#x27;s recent dip in strikeout rate (15.2%) despite elite walk control (3.0%)</span></div>
-      <p class="why">While the Atlanta Braves hold a superior 64-45 record and home-field advantage, starting pitcher Bryce Elder enters with severe red flags in his recent Statcast metrics, including an unsustainable 17.1% barrel rate and .481 xwOBACON over his last 64 batters faced. Nationals starter Foster Griffin has enjoyed an excellent season (2.76 ERA, 1.03 WHIP) and consistently suppresses hard hit balls. Atlanta&#x27;s offensive capabilities keep them as a slight favorite at home, but Elder&#x27;s contact vulnerability narrows the gap significantly.</p>
+      <div class="pick">Pick: <b>Washington Nationals</b>
+        <span class="conf">&middot; medium confidence
+        &middot; 3 passes agreed within 4 pts (52% / 48% / 48%)</span></div>
+      <div class="factors"><span class="chip">Foster Griffin&#x27;s strong 2.76 season ERA and elite 5.0% recent barrel rate</span><span class="chip">Bryce Elder&#x27;s alarming recent Statcast metrics (17.1% barrel rate, .481 xwOBACON)</span><span class="chip">Atlanta&#x27;s superior overall record (64-45) and strong recent bullpen performance (1.64 ERA in last 3 days)</span><span class="chip">Washington&#x27;s positive recent run differential (+1.2 per game in last 10)</span></div>
+      <p class="why">Although the Braves hold home-field advantage and a better overall record, starting pitcher Foster Griffin gives Washington a clear advantage on the mound over Bryce Elder. Elder&#x27;s recent Statcast metrics reveal severe vulnerability to hard contact, highlighted by a 17.1% barrel rate and a .481 xwOBACON over his last 64 batters faced. While Atlanta&#x27;s bullpen has been effective recently (1.64 ERA over the last 3 days), Griffin&#x27;s elite command and contact suppression give the visiting Nationals a narrow edge.</p>
       <div class="sp"><span>Foster Griffin</span> &middot; ERA 2.76 &middot; WHIP 1.03 &middot; xwOBAcon 0.339 &middot; hard 35.0% &middot; whiff 23.6%<br>
         <span>Bryce Elder</span> &middot; ERA 3.96 &middot; WHIP 1.25 &middot; xwOBAcon 0.481 &middot; hard 48.8% &middot; whiff 23.7%</div>
       
@@ -310,23 +325,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Texas Rangers @ Houston Astros</div>
       <div class="meta">Daikin Park &middot; 2026-07-31 &middot; 5:15 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Texas Rangers</span>
-          <span class="pct">48.0%</span></div>
+          <span class="pct">43.7%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Houston Astros</span>
-          <span class="pct">52.0%</span></div>
+          <span class="pct">56.3%</span></div>
       </div>
-      <div class="bar" title="Texas Rangers 48.0% &middot; Houston Astros 52.0%">
-        <div class="seg away" style="width:48.00%"></div>
-        <div class="seg home" style="width:52.00%"></div>
+      <div class="bar" title="Texas Rangers 43.7% &middot; Houston Astros 56.3%">
+        <div class="seg away" style="width:43.67%"></div>
+        <div class="seg home" style="width:56.33%"></div>
       </div>
       <div class="pick">Pick: <b>Houston Astros</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Starting Pitching Matchup</span><span class="chip">Recent Statcast Data</span><span class="chip">Home-Field Advantage</span></div>
-      <p class="why">The starting pitching matchup is closely contested, with Hunter Brown&#x27;s recent statcast data showing a high whiff percentage but also a concerning hard-hit percentage. Nathan Eovaldi has a higher xwOBACON and barrel percentage, indicating potential struggles with preventing extra-base hits. The home-field advantage slightly favors the Astros, giving them a narrow edge in this evenly matched game.</p>
+        <span class="conf">&middot; medium confidence
+        &middot; 3 passes agreed within 5 pts (53% / 58% / 58%)</span></div>
+      <div class="factors"><span class="chip">Recent starting pitcher performance</span><span class="chip">Bullpen usage</span><span class="chip">Home team recent form</span></div>
+      <p class="why">The Astros have a slight edge in this matchup due to Hunter Brown&#x27;s recent Statcast metrics and the Rangers&#x27; bullpen showing signs of fatigue from heavy usage. The Astros&#x27; recent form, with an 8-2 record in their last 10 games, also contributes to their advantage. However, Nathan Eovaldi&#x27;s strong recent performance and the neutral-to-slightly-offensive park environment keep the game competitive.</p>
       <div class="sp"><span>Nathan Eovaldi</span> &middot; ERA 4.05 &middot; WHIP 1.17 &middot; xwOBAcon 0.389 &middot; hard 50.9% &middot; whiff 33.8%<br>
         <span>Hunter Brown</span> &middot; ERA 3.45 &middot; WHIP 1.28 &middot; xwOBAcon 0.343 &middot; hard 42.4% &middot; whiff 34.3%</div>
       
@@ -334,23 +350,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Kansas City Royals @ Colorado Rockies</div>
       <div class="meta">Coors Field &middot; 2026-07-31 &middot; 5:40 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Kansas City Royals</span>
-          <span class="pct">57.0%</span></div>
+          <span class="pct">49.3%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Colorado Rockies</span>
-          <span class="pct">43.0%</span></div>
+          <span class="pct">50.7%</span></div>
       </div>
-      <div class="bar" title="Kansas City Royals 57.0% &middot; Colorado Rockies 43.0%">
-        <div class="seg away" style="width:57.00%"></div>
-        <div class="seg home" style="width:43.00%"></div>
+      <div class="bar" title="Kansas City Royals 49.3% &middot; Colorado Rockies 50.7%">
+        <div class="seg away" style="width:49.33%"></div>
+        <div class="seg home" style="width:50.67%"></div>
       </div>
-      <div class="pick">Pick: <b>Kansas City Royals</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Tomoyuki Sugano exhibits alarming contact metrics (15.8% barrel rate, .513 xwOBACON recently)</span><span class="chip">Sugano&#x27;s extreme home run vulnerability (20 HR in 96 IP) is a liability at Coors Field</span><span class="chip">Michael Wacha provides a significantly more reliable pitching floor (3.60 ERA, 1.17 WHIP)</span><span class="chip">Kansas City holds the overall starting pitching edge</span></div>
-      <p class="why">Tomoyuki Sugano has been hit extremely hard in recent starts, surrendering a 15.8% barrel rate and a .513 xwOBACON over his last 170 pitches. Translating those quality-of-contact struggles to Coors Field creates a high-risk situation for Colorado, especially given Sugano&#x27;s season-long HR issues. Michael Wacha gives Kansas City a distinct starting pitching advantage that offsets Colorado&#x27;s customary home-field elevation boost.</p>
+      <div class="pick">Pick: <b>Colorado Rockies</b>
+        <span class="conf">&middot; medium confidence
+        &middot; 3 passes agreed within 4 pts (52% / 48% / 52%)</span></div>
+      <div class="factors"><span class="chip">recent starter form</span><span class="chip">bullpen rest</span><span class="chip">park factor</span></div>
+      <p class="why">The Rockies&#x27; Tomoyuki Sugano has struggled recently, but the Royals&#x27; Michael Wacha has been solid. However, Wacha&#x27;s higher walk rate in the last 30 days is a concern. The Rockies&#x27; bullpen is relatively well-rested, while the Royals&#x27; bullpen has been used more heavily and has a higher ERA over the last 3 days. Coors Field&#x27;s high run environment amplifies the risk for both starters, but the Rockies may have a slight advantage playing at home.</p>
       <div class="sp"><span>Michael Wacha</span> &middot; ERA 3.60 &middot; WHIP 1.17 &middot; xwOBAcon 0.422 &middot; hard 39.4% &middot; whiff 16.2%<br>
         <span>Tomoyuki Sugano</span> &middot; ERA 4.69 &middot; WHIP 1.29 &middot; xwOBAcon 0.513 &middot; hard 47.4% &middot; whiff 21.7%</div>
       
@@ -358,7 +375,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Milwaukee Brewers @ Los Angeles Angels</div>
       <div class="meta">Angel Stadium &middot; 2026-07-31 &middot; 6:38 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Milwaukee Brewers</span>
@@ -372,9 +389,10 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
         <div class="seg home" style="width:42.00%"></div>
       </div>
       <div class="pick">Pick: <b>Milwaukee Brewers</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Shane Drohan&#x27;s recent form</span><span class="chip">Ryan Johnson&#x27;s high hard-hit and barrel rates</span><span class="chip">Starting pitching matchup</span></div>
-      <p class="why">The Brewers have a significant advantage in the starting pitching matchup with Shane Drohan, who has been performing well recently, facing Ryan Johnson, who has struggled with a high ERA and hard-hit rate. Despite Angel Stadium being a home game for the Angels, the Brewers&#x27; edge in starting pitching gives them the lean. The recent Statcast data for both starters reveals that Drohan has been more effective, although his high hard-hit percentage is a concern. Overall, the Brewers are the favored team in this matchup.</p>
+        <span class="conf">&middot; high confidence
+        &middot; 3 passes agreed within 0 pts (42% / 42% / 42%)</span></div>
+      <div class="factors"><span class="chip">Starting pitching matchup</span><span class="chip">Recent team form</span><span class="chip">Bullpen performance</span></div>
+      <p class="why">The Brewers have a significant edge in the starting pitching matchup with Shane Drohan, who has a lower ERA and stronger recent statcast metrics than Ryan Johnson. The recent form of the two teams also favors the Brewers, who have gone 6-4 in their last 10 games compared to the Angels&#x27; 4-6. However, the bullpens are relatively evenly matched, with the Angels&#x27; bullpen having a slightly better relief ERA over the last three days.</p>
       <div class="sp"><span>Shane Drohan</span> &middot; ERA 3.51 &middot; WHIP 1.20 &middot; xwOBAcon 0.337 &middot; hard 40.7% &middot; whiff 29.7%<br>
         <span>Ryan Johnson</span> &middot; ERA 7.34 &middot; WHIP 1.54 &middot; xwOBAcon 0.416 &middot; hard 26.4% &middot; whiff 24.6%</div>
       
@@ -385,28 +403,30 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status">
         <span class="badge prov">No pick yet</span>
         <span class="conf">waiting on Detroit Tigers starter to be announced &mdash; the watcher picks this up automatically once posted</span></div>
+      <div class="status"><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="sp"><span>TBD</span> (away)<br><span>Jeffrey Springs</span> (home)</div>
     </div>
     <div class="card">
       <div class="matchup">San Francisco Giants @ San Diego Padres</div>
       <div class="meta">Petco Park &middot; 2026-07-31 &middot; 6:45 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>San Francisco Giants</span>
-          <span class="pct">37.0%</span></div>
+          <span class="pct">42.3%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>San Diego Padres</span>
-          <span class="pct">63.0%</span></div>
+          <span class="pct">57.7%</span></div>
       </div>
-      <div class="bar" title="San Francisco Giants 37.0% &middot; San Diego Padres 63.0%">
-        <div class="seg away" style="width:37.00%"></div>
-        <div class="seg home" style="width:63.00%"></div>
+      <div class="bar" title="San Francisco Giants 42.3% &middot; San Diego Padres 57.7%">
+        <div class="seg away" style="width:42.33%"></div>
+        <div class="seg home" style="width:57.67%"></div>
       </div>
       <div class="pick">Pick: <b>San Diego Padres</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Bradgley Rodriguez boasts elite recent Statcast metrics, including a 0.0% barrel rate and .274 xwOBACON.</span><span class="chip">Carson Whisenhunt has struggled with contact quality (14.8% barrel rate, .473 xwOBACON) and command (13.6% BB rate).</span><span class="chip">San Diego (55-54) holds a clear record advantage over San Francisco (47-62).</span><span class="chip">Home-field advantage for San Diego at pitcher-friendly Petco Park.</span></div>
-      <p class="why">The Padres hold a substantial edge on the mound with Bradgley Rodriguez, who has exhibited top-tier contact suppression and command over his recent outings. Conversely, Giants left-hander Carson Whisenhunt is allowing excessive hard contact and high barrel rates despite solid whiff numbers. Combined with San Diego&#x27;s superior overall record and home-field advantage at Petco Park, the Padres are clear favorites.</p>
+        <span class="conf">&middot; high confidence
+        &middot; 3 passes agreed within 1 pts (57% / 58% / 58%)</span></div>
+      <div class="factors"><span class="chip">Starting Pitching</span><span class="chip">Bullpen</span><span class="chip">Recent Form</span></div>
+      <p class="why">The Padres have a slight edge in the starting pitching matchup, with Bradgley Rodriguez boasting a strong recent statcast, including a 0.0% barrel percentage. The Padres&#x27; bullpen also appears to be in better shape, with a lower relief ERA and higher strikeout rate over the last three days. The recent form of both teams is relatively even, but the Padres have a slight advantage at home in Petco Park, which suppresses run scoring.</p>
       <div class="sp"><span>Carson Whisenhunt</span> &middot; ERA 4.60 &middot; WHIP 1.40 &middot; xwOBAcon 0.473 &middot; hard 44.4% &middot; whiff 37.2%<br>
         <span>Bradgley Rodriguez</span> &middot; ERA 2.33 &middot; WHIP 1.17 &middot; xwOBAcon 0.274 &middot; hard 27.6% &middot; whiff 26.2%</div>
       
@@ -414,23 +434,24 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Boston Red Sox @ Los Angeles Dodgers</div>
       <div class="meta">UNIQLO Field at Dodger Stadium &middot; 2026-07-31 &middot; 7:10 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Boston Red Sox</span>
-          <span class="pct">42.0%</span></div>
+          <span class="pct">46.7%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Los Angeles Dodgers</span>
-          <span class="pct">58.0%</span></div>
+          <span class="pct">53.3%</span></div>
       </div>
-      <div class="bar" title="Boston Red Sox 42.0% &middot; Los Angeles Dodgers 58.0%">
-        <div class="seg away" style="width:42.00%"></div>
-        <div class="seg home" style="width:58.00%"></div>
+      <div class="bar" title="Boston Red Sox 46.7% &middot; Los Angeles Dodgers 53.3%">
+        <div class="seg away" style="width:46.67%"></div>
+        <div class="seg home" style="width:53.33%"></div>
       </div>
       <div class="pick">Pick: <b>Los Angeles Dodgers</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Dodgers&#x27; home advantage</span><span class="chip">Henriquez&#x27;s strong recent form</span><span class="chip">Suarez&#x27;s high hard-hit percentage</span><span class="chip">Pitching matchup</span><span class="chip">Recent team form</span></div>
-      <p class="why">The Dodgers have a slight edge in this matchup, thanks to their strong home record and Edgardo Henriquez&#x27;s impressive recent statcast numbers, including a 0.0 barrel percentage and 26.0 whiff percentage. However, Ranger Suarez has been solid for the Red Sox, with a 36.7 percent strikeout rate over his last 30 days. The high hard-hit percentage from Suarez is a concern, but the Dodgers&#x27; home-field advantage and Henriquez&#x27;s form give them a narrow advantage.</p>
+        <span class="conf">&middot; medium confidence
+        &middot; 3 passes agreed within 3 pts (52% / 55% / 53%)</span></div>
+      <div class="factors"><span class="chip">Starting pitching matchup</span><span class="chip">Recent team form</span><span class="chip">Bullpen usage and effectiveness</span></div>
+      <p class="why">The Dodgers have a slight edge in the starting pitching matchup with Edgardo Henriquez&#x27;s strong recent statcast, but Ranger Suarez has also been effective. The Red Sox have been playing better recently, but the Dodgers&#x27; home field and slightly more rested bullpen give them a narrow advantage. The relatively low park index also slightly favors the pitchers, which could lead to a lower-scoring game.</p>
       <div class="sp"><span>Ranger Suarez</span> &middot; ERA 3.02 &middot; WHIP 1.15 &middot; xwOBAcon 0.438 &middot; hard 36.8% &middot; whiff 22.2%<br>
         <span>Edgardo Henriquez</span> &middot; ERA 2.79 &middot; WHIP 1.05 &middot; xwOBAcon 0.212 &middot; hard 20.8% &middot; whiff 26.0%</div>
       
@@ -438,28 +459,29 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Minnesota Twins @ Seattle Mariners</div>
       <div class="meta">T-Mobile Park &middot; 2026-07-31 &middot; 7:10 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Minnesota Twins</span>
-          <span class="pct">40.0%</span></div>
+          <span class="pct">42.0%</span></div>
         <div class="side r"><span class="dot home"></span>
           <span>Seattle Mariners</span>
-          <span class="pct">60.0%</span></div>
+          <span class="pct">58.0%</span></div>
       </div>
-      <div class="bar" title="Minnesota Twins 40.0% &middot; Seattle Mariners 60.0%">
-        <div class="seg away" style="width:40.00%"></div>
-        <div class="seg home" style="width:60.00%"></div>
+      <div class="bar" title="Minnesota Twins 42.0% &middot; Seattle Mariners 58.0%">
+        <div class="seg away" style="width:42.00%"></div>
+        <div class="seg home" style="width:58.00%"></div>
       </div>
       <div class="pick">Pick: <b>Seattle Mariners</b>
-        <span class="conf">&middot; medium confidence</span></div>
-      <div class="factors"><span class="chip">Bryce Miller holds a massive season efficiency edge (2.75 ERA, 0.92 WHIP vs. Zebby Matthews&#x27; 5.21 ERA, 1.32 WHIP)</span><span class="chip">Zebby Matthews&#x27; recent Statcast profile shows severe regression indicators (13.2% BB%, 10.8% Barrel%, .382 xwOBACON)</span><span class="chip">T-Mobile Park favors Bryce Miller&#x27;s ability to limit hard damage (5.2% barrel rate recently)</span><span class="chip">Home-field advantage for Seattle against a struggling opposing starter</span></div>
-      <p class="why">Seattle carries a decisive starting pitching edge into this matchup. Bryce Miller has been exceptional overall this season with a 0.92 WHIP, and T-Mobile Park offers a hospitable environment to maintain that success. On the other side, Zebby Matthews has struggled significantly with control (13.2% BB%) and barrel prevention (10.8%) in recent outings, putting the Twins at a distinct early-game disadvantage.</p>
+        <span class="conf">&middot; high confidence
+        &middot; 3 passes agreed within 0 pts (58% / 58% / 58%)</span></div>
+      <div class="factors"><span class="chip">Starting pitching matchup</span><span class="chip">Recent team form</span><span class="chip">Bullpen usage</span></div>
+      <p class="why">The Seattle Mariners, led by starter Bryce Miller, have a favorable pitching matchup against the Minnesota Twins&#x27; Zebby Matthews. Miller&#x27;s recent statcast metrics, such as a 16.8% strikeout rate and 5.2% barrel rate, indicate strong form, while Matthews has struggled with a 10.8% barrel rate and 0.382 xwOBACON. Although the Twins have a slightly better recent record, the Mariners&#x27; home advantage and relatively fresher bullpen give them an edge.</p>
       <div class="sp"><span>Zebby Matthews</span> &middot; ERA 5.21 &middot; WHIP 1.32 &middot; xwOBAcon 0.382 &middot; hard 36.9% &middot; whiff 17.9%<br>
         <span>Bryce Miller</span> &middot; ERA 2.75 &middot; WHIP 0.92 &middot; xwOBAcon 0.307 &middot; hard 35.1% &middot; whiff 23.8%</div>
       
     </div></div>
-  <div id="tableview" class="hidden"><table><thead><tr><th>Game</th><th class='num'>Away</th><th class='num'>Home</th><th>Conf.</th><th class='num'>Result</th></tr></thead><tbody><tr><td>New York Yankees @ Chicago Cubs</td><td class='num'>41.5%</td><td class='num'>58.5%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Pittsburgh Pirates @ Cincinnati Reds</td><td class='num'>54.0%</td><td class='num'>46.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>St. Louis Cardinals @ Toronto Blue Jays</td><td class='num'>39.0%</td><td class='num'>61.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Arizona Diamondbacks @ Cleveland Guardians</td><td class='num'>39.0%</td><td class='num'>61.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Chicago White Sox @ Tampa Bay Rays</td><td class='num'>38.0%</td><td class='num'>62.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Miami Marlins @ New York Mets</td><td class='num'>47.0%</td><td class='num'>53.0%</td><td>low</td><td class='num'>&mdash;</td></tr><tr><td>Washington Nationals @ Atlanta Braves</td><td class='num'>49.0%</td><td class='num'>51.0%</td><td>low</td><td class='num'>&mdash;</td></tr><tr><td>Texas Rangers @ Houston Astros</td><td class='num'>48.0%</td><td class='num'>52.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Kansas City Royals @ Colorado Rockies</td><td class='num'>57.0%</td><td class='num'>43.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Milwaukee Brewers @ Los Angeles Angels</td><td class='num'>58.0%</td><td class='num'>42.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>San Francisco Giants @ San Diego Padres</td><td class='num'>37.0%</td><td class='num'>63.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Boston Red Sox @ Los Angeles Dodgers</td><td class='num'>42.0%</td><td class='num'>58.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Minnesota Twins @ Seattle Mariners</td><td class='num'>40.0%</td><td class='num'>60.0%</td><td>medium</td><td class='num'>&mdash;</td></tr></tbody></table></div>
+  <div id="tableview" class="hidden"><table><thead><tr><th>Game</th><th class='num'>Away</th><th class='num'>Home</th><th>Conf.</th><th class='num'>Result</th></tr></thead><tbody><tr><td>New York Yankees @ Chicago Cubs</td><td class='num'>43.7%</td><td class='num'>56.3%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Pittsburgh Pirates @ Cincinnati Reds</td><td class='num'>56.3%</td><td class='num'>43.7%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>St. Louis Cardinals @ Toronto Blue Jays</td><td class='num'>43.3%</td><td class='num'>56.7%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Arizona Diamondbacks @ Cleveland Guardians</td><td class='num'>41.3%</td><td class='num'>58.7%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Chicago White Sox @ Tampa Bay Rays</td><td class='num'>42.3%</td><td class='num'>57.7%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Miami Marlins @ New York Mets</td><td class='num'>43.0%</td><td class='num'>57.0%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Washington Nationals @ Atlanta Braves</td><td class='num'>50.7%</td><td class='num'>49.3%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Texas Rangers @ Houston Astros</td><td class='num'>43.7%</td><td class='num'>56.3%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Kansas City Royals @ Colorado Rockies</td><td class='num'>49.3%</td><td class='num'>50.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Milwaukee Brewers @ Los Angeles Angels</td><td class='num'>58.0%</td><td class='num'>42.0%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>San Francisco Giants @ San Diego Padres</td><td class='num'>42.3%</td><td class='num'>57.7%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Boston Red Sox @ Los Angeles Dodgers</td><td class='num'>46.7%</td><td class='num'>53.3%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Minnesota Twins @ Seattle Mariners</td><td class='num'>42.0%</td><td class='num'>58.0%</td><td>high</td><td class='num'>&mdash;</td></tr></tbody></table></div>
   <footer>
     Win probability is the model's pre-game estimate, made before first pitch.
     Record and Brier cover every graded game in predictions.jsonl, not just
@@ -467,6 +489,20 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
   </footer>
 </div></div>
 <script>
+// Show when the page was built, in the READER's own timezone -- so anyone you
+// share the link with can tell at a glance whether they're looking at a
+// current page or a cached copy.
+(function(){
+  var el = document.getElementById('updated');
+  if(!el || !el.dataset.ts) return;
+  var d = new Date(el.dataset.ts);
+  if(isNaN(d.getTime())) return;
+  var mins = Math.round((Date.now() - d.getTime())/60000);
+  var when = d.toLocaleString([], {month:'short', day:'numeric',
+                                   hour:'numeric', minute:'2-digit'});
+  el.textContent = 'updated ' + when +
+    (mins < 2 ? ' (just now)' : mins < 90 ? ' (' + mins + ' min ago)' : '');
+})();
 function toggleTheme(){
   var r=document.documentElement;
   var d=r.getAttribute('data-theme')==='dark'||
