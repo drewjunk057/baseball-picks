@@ -123,8 +123,8 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <button class="btn" onclick="toggleTheme()">Theme</button>
     </div>
   </header>
-  <p class="sub">8 of 15 games picked &middot; reasoned by gemini-3.6-flash &middot;
-    <span id="updated" data-ts="2026-08-02T16:53:43.196319+00:00"
+  <p class="sub">9 of 15 games picked &middot; reasoned by gemini-3.6-flash &middot;
+    <span id="updated" data-ts="2026-08-02T17:10:08.495456+00:00"
     >updated just now</span></p>
   <div class="tiles">
       <div class="tile"><div class="label">Record</div>
@@ -371,7 +371,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status">
         <span class="badge prov">No pick yet</span>
         <span class="conf">not reasoned yet &mdash; the watcher will pick this up on its next pass</span></div>
-      <div class="status"><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
+      <div class="status"><span class="badge prov">Lineups partial</span><span class="conf">one side posted</span></div>
       <div class="sp"><span>Keider Montero</span> (away)<br><span>Gage Jump</span> (home)</div>
     </div>
     <div class="card pending">
@@ -380,17 +380,33 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status">
         <span class="badge prov">No pick yet</span>
         <span class="conf">not reasoned yet &mdash; the watcher will pick this up on its next pass</span></div>
-      <div class="status"><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
-      <div class="sp"><span>Landen Roupp</span> (away)<br><span>Michael King</span> (home)</div>
+      <div class="status"><span class="badge lock">&#10003; Lineups posted</span></div>
+      <div class="sp"><span>Landen Roupp</span> (away)<br><span>Kyle Hart</span> (home)</div>
     </div>
-    <div class="card pending">
+    <div class="card">
       <div class="matchup">Minnesota Twins @ Seattle Mariners</div>
       <div class="meta">T-Mobile Park &middot; 2026-08-02 &middot; 1:10 PM</div>
-      <div class="status">
-        <span class="badge prov">No pick yet</span>
-        <span class="conf">not reasoned yet &mdash; the watcher will pick this up on its next pass</span></div>
-      <div class="status"><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
-      <div class="sp"><span>Taj Bradley</span> (away)<br><span>George Kirby</span> (home)</div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
+      <div class="teams">
+        <div class="side"><span class="dot away"></span>
+          <span>Minnesota Twins</span>
+          <span class="pct">54.0%</span></div>
+        <div class="side r"><span class="dot home"></span>
+          <span>Seattle Mariners</span>
+          <span class="pct">46.0%</span></div>
+      </div>
+      <div class="bar" title="Minnesota Twins 54.0% &middot; Seattle Mariners 46.0%">
+        <div class="seg away" style="width:54.00%"></div>
+        <div class="seg home" style="width:46.00%"></div>
+      </div>
+      <div class="pick">Pick: <b>Minnesota Twins</b>
+        <span class="conf">&middot; low confidence
+        </span></div>
+      <div class="factors"><span class="chip">George Kirby&#x27;s alarming recent Statcast metrics (12.8% barrel rate, .447 xwOBACON)</span><span class="chip">Taj Bradley&#x27;s superior swing-and-miss profile (29.6% K rate recently)</span><span class="chip">Minnesota&#x27;s strong recent form (7-3, +0.8 run diff) vs Seattle&#x27;s slide (3-7, -1.7 run diff)</span><span class="chip">T-Mobile Park&#x27;s heavily pitcher-friendly environment (82 park index)</span><span class="chip">Seattle&#x27;s fresher bullpen relative to Minnesota&#x27;s heavily worked relief corps</span></div>
+      <p class="why">Taj Bradley gives the Twins an edge on the mound over George Kirby, whose recent Statcast profile shows significant vulnerability to hard contact with a 12.8% barrel rate and .447 xwOBACON over his last 65 batters faced. Minnesota also enters in much stronger recent form, winning seven of their last ten games while Seattle has dropped seven of ten. Although T-Mobile Park&#x27;s pitcher-friendly profile and a fresher Mariners bullpen help narrow the gap, the Twins hold the overall matchup advantage.</p>
+      <div class="sp"><span>Taj Bradley</span> &middot; ERA 3.65 &middot; WHIP 1.21 &middot; xwOBAcon 0.36 &middot; hard 41.6% &middot; whiff 27.8%<br>
+        <span>George Kirby</span> &middot; ERA 3.98 &middot; WHIP 1.30 &middot; xwOBAcon 0.447 &middot; hard 44.7% &middot; whiff 29.7%</div>
+      
     </div>
     <div class="card pending">
       <div class="matchup">Boston Red Sox @ Los Angeles Dodgers</div>
@@ -401,7 +417,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status"><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="sp"><span>Jake Bennett</span> (away)<br><span>Emmet Sheehan</span> (home)</div>
     </div></div>
-  <div id="tableview" class="hidden"><table><thead><tr><th>Game</th><th class='num'>Away</th><th class='num'>Home</th><th>Conf.</th><th class='num'>Result</th></tr></thead><tbody><tr><td>Philadelphia Phillies @ Baltimore Orioles</td><td class='num'>59.0%</td><td class='num'>41.0%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Washington Nationals @ Atlanta Braves</td><td class='num'>52.0%</td><td class='num'>48.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>St. Louis Cardinals @ Toronto Blue Jays</td><td class='num'>47.3%</td><td class='num'>52.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Arizona Diamondbacks @ Cleveland Guardians</td><td class='num'>47.3%</td><td class='num'>52.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Pittsburgh Pirates @ Cincinnati Reds</td><td class='num'>41.7%</td><td class='num'>58.3%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Chicago White Sox @ Tampa Bay Rays</td><td class='num'>38.7%</td><td class='num'>61.3%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Miami Marlins @ New York Mets</td><td class='num'>59.5%</td><td class='num'>40.5%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Texas Rangers @ Houston Astros</td><td class='num'>36.5%</td><td class='num'>63.5%</td><td>high</td><td class='num'>&mdash;</td></tr></tbody></table></div>
+  <div id="tableview" class="hidden"><table><thead><tr><th>Game</th><th class='num'>Away</th><th class='num'>Home</th><th>Conf.</th><th class='num'>Result</th></tr></thead><tbody><tr><td>Philadelphia Phillies @ Baltimore Orioles</td><td class='num'>59.0%</td><td class='num'>41.0%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Washington Nationals @ Atlanta Braves</td><td class='num'>52.0%</td><td class='num'>48.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>St. Louis Cardinals @ Toronto Blue Jays</td><td class='num'>47.3%</td><td class='num'>52.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Arizona Diamondbacks @ Cleveland Guardians</td><td class='num'>47.3%</td><td class='num'>52.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Pittsburgh Pirates @ Cincinnati Reds</td><td class='num'>41.7%</td><td class='num'>58.3%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Chicago White Sox @ Tampa Bay Rays</td><td class='num'>38.7%</td><td class='num'>61.3%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Miami Marlins @ New York Mets</td><td class='num'>59.5%</td><td class='num'>40.5%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Texas Rangers @ Houston Astros</td><td class='num'>36.5%</td><td class='num'>63.5%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Minnesota Twins @ Seattle Mariners</td><td class='num'>54.0%</td><td class='num'>46.0%</td><td>low</td><td class='num'>&mdash;</td></tr></tbody></table></div>
   <footer>
     Win probability is the model's pre-game estimate, made before first pitch.
     Record and Brier cover every graded game in predictions.jsonl, not just
