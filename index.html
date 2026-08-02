@@ -123,8 +123,8 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <button class="btn" onclick="toggleTheme()">Theme</button>
     </div>
   </header>
-  <p class="sub">9 of 15 games picked &middot; reasoned by gemini-3.6-flash &middot;
-    <span id="updated" data-ts="2026-08-02T17:10:08.495456+00:00"
+  <p class="sub">10 of 15 games picked &middot; reasoned by gemini-3.6-flash &middot;
+    <span id="updated" data-ts="2026-08-02T17:29:16.300705+00:00"
     >updated just now</span></p>
   <div class="tiles">
       <div class="tile"><div class="label">Record</div>
@@ -356,14 +356,30 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status"><span class="badge lock">&#10003; Lineups posted</span></div>
       <div class="sp"><span>Seth Lugo</span> (away)<br><span>Kyle Freeland</span> (home)</div>
     </div>
-    <div class="card pending">
+    <div class="card">
       <div class="matchup">Milwaukee Brewers @ Los Angeles Angels</div>
       <div class="meta">Angel Stadium &middot; 2026-08-02 &middot; 12:15 PM</div>
-      <div class="status">
-        <span class="badge prov">No pick yet</span>
-        <span class="conf">not reasoned yet &mdash; the watcher will pick this up on its next pass</span></div>
-      <div class="status"><span class="badge lock">&#10003; Lineups posted</span></div>
-      <div class="sp"><span>Jacob Misiorowski</span> (away)<br><span>Walbert Ureña</span> (home)</div>
+      <div class="status"><span class="badge lock">&#10003; Locked</span><span class="conf">confirmed lineups</span></div>
+      <div class="teams">
+        <div class="side"><span class="dot away"></span>
+          <span>Milwaukee Brewers</span>
+          <span class="pct">64.0%</span></div>
+        <div class="side r"><span class="dot home"></span>
+          <span>Los Angeles Angels</span>
+          <span class="pct">36.0%</span></div>
+      </div>
+      <div class="bar" title="Milwaukee Brewers 64.0% &middot; Los Angeles Angels 36.0%">
+        <div class="seg away" style="width:64.00%"></div>
+        <div class="seg home" style="width:36.00%"></div>
+      </div>
+      <div class="pick">Pick: <b>Milwaukee Brewers</b>
+        <span class="conf">&middot; high confidence
+        </span></div>
+      <div class="factors"><span class="chip">Jacob Misiorowski&#x27;s dominant form (49.2% K% and 1.7% BB% in recent Statcast window)</span><span class="chip">Significant record and recent form differential (Brewers 69-41 vs Angels 42-69)</span><span class="chip">Milwaukee lineup edge vs RHP (.801 OPS vs Angels&#x27; .703 OPS)</span><span class="chip">Angels bullpen heavily taxed after working 7.0 innings yesterday</span></div>
+      <p class="why">Milwaukee holds a massive starting pitching advantage behind Jacob Misiorowski, who is posting elite metrics including a 49.2% strikeout rate and 39.2% whiff rate in his recent Statcast window. The Brewers&#x27; lineup is significantly more productive against right-handed pitching (.801 team OPS vs RHP) compared to an Angels offense struggling down the order. Additionally, Los Angeles had to use 7.0 bullpen innings yesterday, leaving their relief corps depleted against a rested Milwaukee bullpen that has been unhittable over the past three days.</p>
+      <div class="sp"><span>Jacob Misiorowski</span> &middot; ERA 1.58 &middot; WHIP 0.75 &middot; xwOBAcon 0.276 &middot; hard 40.7% &middot; whiff 39.2%<br>
+        <span>Walbert Ureña</span> &middot; ERA 2.70 &middot; WHIP 1.26 &middot; xwOBAcon 0.274 &middot; hard 31.0% &middot; whiff 25.0%</div>
+      
     </div>
     <div class="card pending">
       <div class="matchup">Detroit Tigers @ Athletics</div>
@@ -371,7 +387,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status">
         <span class="badge prov">No pick yet</span>
         <span class="conf">not reasoned yet &mdash; the watcher will pick this up on its next pass</span></div>
-      <div class="status"><span class="badge prov">Lineups partial</span><span class="conf">one side posted</span></div>
+      <div class="status"><span class="badge lock">&#10003; Lineups posted</span></div>
       <div class="sp"><span>Keider Montero</span> (away)<br><span>Gage Jump</span> (home)</div>
     </div>
     <div class="card pending">
@@ -386,7 +402,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     <div class="card">
       <div class="matchup">Minnesota Twins @ Seattle Mariners</div>
       <div class="meta">T-Mobile Park &middot; 2026-08-02 &middot; 1:10 PM</div>
-      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
+      <div class="status"><span class="badge prov">Provisional</span><span class="conf">locks 10 min before first pitch</span><span class="badge lock">&#10003; Lineups posted</span></div>
       <div class="teams">
         <div class="side"><span class="dot away"></span>
           <span>Minnesota Twins</span>
@@ -417,7 +433,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status"><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
       <div class="sp"><span>Jake Bennett</span> (away)<br><span>Emmet Sheehan</span> (home)</div>
     </div></div>
-  <div id="tableview" class="hidden"><table><thead><tr><th>Game</th><th class='num'>Away</th><th class='num'>Home</th><th>Conf.</th><th class='num'>Result</th></tr></thead><tbody><tr><td>Philadelphia Phillies @ Baltimore Orioles</td><td class='num'>59.0%</td><td class='num'>41.0%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Washington Nationals @ Atlanta Braves</td><td class='num'>52.0%</td><td class='num'>48.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>St. Louis Cardinals @ Toronto Blue Jays</td><td class='num'>47.3%</td><td class='num'>52.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Arizona Diamondbacks @ Cleveland Guardians</td><td class='num'>47.3%</td><td class='num'>52.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Pittsburgh Pirates @ Cincinnati Reds</td><td class='num'>41.7%</td><td class='num'>58.3%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Chicago White Sox @ Tampa Bay Rays</td><td class='num'>38.7%</td><td class='num'>61.3%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Miami Marlins @ New York Mets</td><td class='num'>59.5%</td><td class='num'>40.5%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Texas Rangers @ Houston Astros</td><td class='num'>36.5%</td><td class='num'>63.5%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Minnesota Twins @ Seattle Mariners</td><td class='num'>54.0%</td><td class='num'>46.0%</td><td>low</td><td class='num'>&mdash;</td></tr></tbody></table></div>
+  <div id="tableview" class="hidden"><table><thead><tr><th>Game</th><th class='num'>Away</th><th class='num'>Home</th><th>Conf.</th><th class='num'>Result</th></tr></thead><tbody><tr><td>Philadelphia Phillies @ Baltimore Orioles</td><td class='num'>59.0%</td><td class='num'>41.0%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Washington Nationals @ Atlanta Braves</td><td class='num'>52.0%</td><td class='num'>48.0%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>St. Louis Cardinals @ Toronto Blue Jays</td><td class='num'>47.3%</td><td class='num'>52.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Arizona Diamondbacks @ Cleveland Guardians</td><td class='num'>47.3%</td><td class='num'>52.7%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Pittsburgh Pirates @ Cincinnati Reds</td><td class='num'>41.7%</td><td class='num'>58.3%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Chicago White Sox @ Tampa Bay Rays</td><td class='num'>38.7%</td><td class='num'>61.3%</td><td>medium</td><td class='num'>&mdash;</td></tr><tr><td>Miami Marlins @ New York Mets</td><td class='num'>59.5%</td><td class='num'>40.5%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Texas Rangers @ Houston Astros</td><td class='num'>36.5%</td><td class='num'>63.5%</td><td>high</td><td class='num'>&mdash;</td></tr><tr><td>Minnesota Twins @ Seattle Mariners</td><td class='num'>54.0%</td><td class='num'>46.0%</td><td>low</td><td class='num'>&mdash;</td></tr><tr><td>Milwaukee Brewers @ Los Angeles Angels</td><td class='num'>64.0%</td><td class='num'>36.0%</td><td>high</td><td class='num'>&mdash;</td></tr></tbody></table></div>
   <footer>
     Win probability is the model's pre-game estimate, made before first pitch.
     Record and Brier cover every graded game in predictions.jsonl, not just
