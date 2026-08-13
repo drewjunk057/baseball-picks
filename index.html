@@ -99,6 +99,21 @@ table.mini{width:100%;margin:6px 0;font-size:.92em}
 table.mini th{font-weight:600;opacity:.75}
 ul.whylist{margin:6px 0 2px 18px;padding:0}
 ul.whylist li{margin:3px 0;font-size:.95em;opacity:.9}
+/* the pick line vs the reference baselines. One row, monospaced numbers so
+   they line up down a column of cards and the eye can scan the gap. */
+.baseline{margin-top:9px;font-size:12.5px;color:var(--text-secondary);
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.baseline .b-item{display:inline-flex;align-items:center;gap:5px;
+  cursor:help;border-bottom:1px dotted rgba(127,127,127,.45)}
+.baseline .b-label{font-size:11px;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--muted)}
+.baseline .b-val{font-variant-numeric:tabular-nums;font-weight:600;
+  color:var(--text-primary)}
+.baseline .b-official .b-label{color:var(--text-secondary)}
+.baseline .b-sep{color:var(--muted)}
+.baseline .b-gap{font-variant-numeric:tabular-nums}
+.baseline .b-gap.wide{color:var(--text-primary);font-weight:600}
+
 .why{margin:12px 0 0;font-size:13px;line-height:1.55;
   color:var(--text-secondary)}
 .sp{margin-top:14px;font-size:12px;color:var(--muted);line-height:1.5}
@@ -140,7 +155,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     </div>
   </header>
   <p class="sub">0 of 9 games picked &middot; reasoned by  &middot;
-    <span id="updated" data-ts="2026-08-13T14:29:26.347735+00:00"
+    <span id="updated" data-ts="2026-08-13T14:55:23.239958+00:00"
     >updated just now</span></p>
   <div class="tiles">
       <div class="tile"><div class="label">Record</div>
