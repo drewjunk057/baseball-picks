@@ -208,7 +208,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
     </div>
   </header>
   <p class="sub">0 of 15 games picked &middot; reasoned by  &middot;
-    <span id="updated" data-ts="2026-08-15T16:29:52.655914+00:00"
+    <span id="updated" data-ts="2026-08-15T16:50:54.235698+00:00"
     >updated just now</span></p>
   <div class="tiles">
       <div class="tile"><div class="label"><span class="tip" title="Every graded game THIS MODEL VERSION has called -- not just this date, and not just games you would have bet. It starts the day the model changed, because a record belongs to the thing that made the picks; older versions are kept under Previous results with their own record rather than averaged into this one.">Record</span></div>
@@ -227,7 +227,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="meta">Comerica Park &middot; 2026-08-15 &middot; 10:10 AM</div>
       <div class="status">
         <span class="badge prov">No pick yet</span>
-        <span class="conf">not reasoned yet &mdash; the watcher will pick this up on its next pass</span></div>
+        <span class="conf">game already underway or finished &mdash; no pre-game pick was locked in time</span></div>
       <div class="status"><span class="badge lock">&#10003; Lineups posted</span></div>
       <div class="sp"><span>Anthony Kay</span> (away)<br><span>Troy Melton</span> (home)</div>
     </div>
@@ -255,7 +255,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
       <div class="status">
         <span class="badge prov">No pick yet</span>
         <span class="conf">not reasoned yet &mdash; the watcher will pick this up on its next pass</span></div>
-      <div class="status"><span class="badge prov">Lineups pending</span><span class="conf">usually 1&ndash;3 hrs before first pitch</span></div>
+      <div class="status"><span class="badge prov">Lineups partial</span><span class="conf">one side posted</span></div>
       <div class="sp"><span>Michael Lorenzen</span> (away)<br><span>Logan Webb</span> (home)</div>
     </div>
     <div class="card pending">
@@ -362,7 +362,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
   <div id="betsview" class="hidden"><p class="sub">No bets clear the threshold right now. That is a normal and healthy result -- most games are priced efficiently, and a card with nothing on it beats forcing a play. If NO game ever shows one, check that ODDS_API_KEY is set, because with no line there is nothing to compare.</p></div>
   <div id="boardsview" class="hidden"><p class="sub">No simulated games yet. The boards fill in once tonight's picks run through the engine.</p></div>
   <div id="lockview" class="hidden"><p class="sub">No picks on the board yet. This tab fills in as the watcher reasons the slate.</p></div>
-  <div id="podview" class="hidden"><p class="sub">No qualifying plays. Most nights the market is priced correctly and the right number of bets is zero.</p></div>
+  <div id="podview" class="hidden"><p class="sub"><strong>No qualifying plays.</strong> Most nights the market is priced correctly and the right number of bets is zero. Our number is shrunk 65% of the way toward the de-vigged market before it is priced, because the market forecasts better than we do (Brier ~0.232 against our 0.2434) — so a night with nothing on it is the expected outcome, not a failure.</p></div>
   <footer>
     Win probability is the model's pre-game estimate, made before first pitch.
     <span class="tip" title="Every graded game THIS MODEL VERSION has called -- not just this date, and not just games you would have bet. It starts the day the model changed, because a record belongs to the thing that made the picks; older versions are kept under Previous results with their own record rather than averaged into this one.">Record</span> and <span class="tip" title="BRIER SCORE grades the probability, not the pick. Square the difference between what was said and what happened, average it. LOWER IS BETTER: 0 is perfect, 0.25 is a coin flip, and predicting the league home-win rate every single game scores about 0.249. The Vegas closing line is around 0.232, which is the real bar. Beating coin-flip is not an achievement here; beating 0.249 is.">Brier</span> cover every graded
